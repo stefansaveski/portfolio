@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
-import ContactForm from "./components/contact-form"
 import ProjectCard from "./components/project-card"
 import TechStack from "./components/tech-stack"
+import Image from "next/image"
 
 export default function Page() {
   return (
@@ -30,13 +30,13 @@ export default function Page() {
         <section id="about" className="py-12 md:py-24 lg:py-24">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <img src="/pfp.jpg" alt="Profile Picture" className="w-48 h-48 rounded-full mx-auto" />
+              <Image src="/pfp.jpg" alt="Profile Picture" className="w-48 h-48 rounded-full mx-auto" width={192} height={192} />
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                   Software Engineering Student
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 mt-10">
-                  👋 Hi! I'm Stefan, a computer science student passionate about programming. I love solving challenges, learning, and creating impactful software. Beyond coding, I enjoy exploring new experiences and balancing work with hobbies.
+                  👋 Hi! I&apos;m Stefan, a computer science student passionate about programming. I love solving challenges, learning, and creating impactful software. Beyond coding, I enjoy exploring new experiences and balancing work with hobbies.
                 </p>
               </div>
               <div className="space-x-4">
