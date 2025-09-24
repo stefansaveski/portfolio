@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card"
+import { Card } from "@/components/ui/card";
 import {
   Code,
   Database,
@@ -13,28 +13,36 @@ import {
   Braces,
   Hammer,
   Rocket,
-} from "lucide-react"
+  Triangle,
+  Code2,
+  FileJson,
+  Zap,
+  GitBranch,
+  Settings,
+} from "lucide-react";
 
 const technologies = [
   {
     category: "Frontend",
     icon: <Globe className="h-5 w-5 text-primary" />,
     skills: [
-      { name: "React", icon: <Flame className="h-4 w-4" /> },
-      { name: "Next.js", icon: <Rocket className="h-4 w-4" /> },
+      { name: "React", icon: <Zap className="h-4 w-4" /> },
+      { name: "Next.js", icon: <Triangle className="h-4 w-4" /> },
       { name: "TailwindCSS", icon: <Palette className="h-4 w-4" /> },
       { name: "Bootstrap", icon: <Boxes className="h-4 w-4" /> },
-      { name: "TypeScript", icon: <Braces className="h-4 w-4" /> },
+      { name: "JavaScript", icon: <FileJson className="h-4 w-4" /> },
+      { name: "TypeScript", icon: <Code2 className="h-4 w-4" /> },
     ],
   },
   {
     category: "Backend",
     icon: <Server className="h-5 w-5 text-primary" />,
     skills: [
-      { name: "Rust", icon: <Hammer className="h-4 w-4" /> },
-      { name: "Flask", icon: <FileCode className="h-4 w-4" /> },
-      { name: "Firebase", icon: <Flame className="h-4 w-4" /> },
       { name: "Node.js", icon: <Layers className="h-4 w-4" /> },
+      { name: ".NET", icon: <Settings className="h-4 w-4" /> },
+      { name: "Spring Boot", icon: <Cpu className="h-4 w-4" /> },
+      { name: "Python Scripting", icon: <FileCode className="h-4 w-4" /> },
+
     ],
   },
   {
@@ -48,15 +56,15 @@ const technologies = [
   },
   {
     category: "Tools & APIs",
-    icon: <Cpu className="h-5 w-5 text-primary" />,
+    icon: <Hammer className="h-5 w-5 text-primary" />,
     skills: [
       { name: "Judge0", icon: <Code className="h-4 w-4" /> },
-      { name: "Git", icon: <Braces className="h-4 w-4" /> },
-      { name: "VS Code", icon: <Code className="h-4 w-4" /> },
-      { name: "Vercel", icon: <Rocket className="h-4 w-4" /> },
+      { name: "Git", icon: <GitBranch className="h-4 w-4" /> },
+      { name: "VS Code", icon: <Code2 className="h-4 w-4" /> },
+      { name: "Vercel", icon: <Triangle className="h-4 w-4" /> },
     ],
   },
-]
+];
 
 export default function TechStack() {
   return (
@@ -81,5 +89,5 @@ export default function TechStack() {
         </Card>
       ))}
     </div>
-  )
+  );
 }

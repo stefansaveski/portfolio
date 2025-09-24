@@ -69,24 +69,38 @@ export default function Page() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <ProjectCard
                 title="CleanCode - Problem Solving Platform"
-                description="A web platform for CS students to practice coding skills. Published at CIIT 2024 conference."
+                description="A web platform for CS students to practice coding skills. Published at CIIT 2024 conference. The project was finished but discontinued, awaiting faculty collboration for deployment."
                 image="https://i.postimg.cc/Gp7nHG1b/test.png"
                 link="https://github.com/imbrsk/CleanCode"
-                tags={["Rust", "React", "MySQL", "Judge0"]}
+                tags={["Rust", "React.js", "MySQL", "Judge0"]}
               />
               <ProjectCard
-                title="Baack to Basics - Code Testing Web App"
-                description="A code testing platform used for a 3-day event with Flask backend and Judge0 integration."
+                title="Back to Basics - Code Testing Web App"
+                description="A code testing platform used for a 3-day event with Flask backend and Judge0 integration. Deployed with 70+ concurrent users."
                 image="https://i.postimg.cc/CxxvdtMf/image-2025-04-20-224939988.png"
                 link="https://github.com/stefansaveski/b2b-py"
                 tags={["Flask", "Bootstrap", "Judge0", "Python"]}
               />
               <ProjectCard
-                title="Kodrum - Education Center"
-                description="IT education hub website for events and private tutoring, featuring modern web technologies."
-                image="https://i.postimg.cc/MGcdmQQ6/491004012-3669230636707791-534478548953838146-n.png"
-                link="#"
-                tags={["Next.js", "TailwindCSS", "Firebase"]}
+                title="Kodrum.mk - Education Center"
+                description="IT education hub website for events and private tutoring, featuring modern web technologies. Deployed and availabe at kodrum.mk with future updates in development."
+                image="https://i.postimg.cc/RVQ50hwm/kodrum-ss.png"
+                link="https://github.com/stefansaveski/kodrum.mk"
+                tags={["Next.js", "TailwindCSS", "PostgreSQL", ".NET"]}
+              />
+              <ProjectCard
+                title="Battleship - AI Agents"
+                description="Built multiple AI agents to play the popular board game Battleship. Expectimax, Heatmap and Monte Carlo models."
+                image="https://i.postimg.cc/FRx8v8jb/battleship.png"
+                link="https://github.com/stefansaveski/battleship-ai"
+                tags={["Python", "Pygame", "Pandas", "NumPy"]}
+              />
+              <ProjectCard
+                title="Iknow - University Management System"
+                description="Modern recreation of the widely used student information system by all faculties in Macedonia."
+                image="https://i.postimg.cc/XJvXcS7X/iknow-ss.png"
+                link=""
+                tags={["Next.js", "TailwindCSS", ".NET", "mySQL"]}
               />
             </div>
           </div>
