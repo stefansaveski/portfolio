@@ -4,6 +4,7 @@ import Link from "next/link"
 import ProjectCard from "./components/project-card"
 import TechStack from "./components/tech-stack"
 import Image from "next/image"
+import ExperienceSection from "./components/experience-section"
 
 export default function Page() {
   return (
@@ -17,6 +18,9 @@ export default function Page() {
             <nav className="flex items-center space-x-6 text-sm font-medium">
               <Link href="#about" className="transition-colors hover:text-foreground/80">
                 About
+              </Link>
+              <Link href="#experience" className="transition-colors hover:text-foreground/80">
+                Experience
               </Link>
               <Link href="#projects" className="transition-colors hover:text-foreground/80">
                 Projects
@@ -63,7 +67,9 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="projects" className="py-12 md:py-24 lg:py-32">
+        <ExperienceSection />
+
+        <section id="projects" className="py-12 md:py-24 lg:py-6">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-12 text-center">Projects</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -84,7 +90,7 @@ export default function Page() {
               <ProjectCard
                 title="Kodrum.mk - Education Center"
                 description="IT education hub website for events and private tutoring, featuring modern web technologies. Deployed and availabe at kodrum.mk with future updates in development."
-                image="https://i.postimg.cc/RVQ50hwm/kodrum-ss.png"
+                image="https://i.postimg.cc/MTw5kZXv/kodrum-ss.png"
                 link="https://github.com/stefansaveski/kodrum.mk"
                 tags={["Next.js", "TailwindCSS", "PostgreSQL", ".NET"]}
               />
@@ -99,8 +105,29 @@ export default function Page() {
                 title="Iknow - University Management System"
                 description="Modern recreation of the widely used student information system by all faculties in Macedonia."
                 image="https://i.postimg.cc/XJvXcS7X/iknow-ss.png"
-                link=""
-                tags={["Next.js", "TailwindCSS", ".NET", "mySQL"]}
+                link="https://iknow-remaster.vercel.app/"
+                tags={["Next.js", "TailwindCSS", ".NET", "postgreSQL", "C#", "TypeScript", ]}
+              />
+              <ProjectCard
+                title="Accelerate.js - Modern JS Framework"
+                description="Bottom-up full constructed JS framework, goal was to fully understand how modern frameworks work."
+                image="https://i.postimg.cc/ZRPf0BX8/accelerate.png"
+                link="https://github.com/stefansaveski/accelerate.js"
+                tags={["JavaScript", "HTML", "CSS"]}
+              />
+              <ProjectCard
+                title="FinX - Finance Management App"
+                description="A personal finance management app built with Next.js and .NET 9 for tracking expenses and budgeting."
+                image="https://i.postimg.cc/SxJzgn7R/finx-logo.png"
+                link="https://github.com/stefansaveski/finxacces-api"
+                tags={["Next.js", ".NET", "mySQL", "C#"]}
+              />
+              <ProjectCard
+                title="CNN Model - NumPy 1/0 Classifier"
+                description="CNN - Neural network from scratch using NumPy to identify if image is 0 or 1."
+                image="https://i.postimg.cc/sD2t0zBG/cnnmodel.png"
+                link="https://github.com/stefansaveski/finxacces-api"
+                tags={["Next.js", ".NET", "mySQL", "C#"]}
               />
             </div>
           </div>
