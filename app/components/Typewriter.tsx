@@ -1,8 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function Typewriter({ text, speed = 500, className = "" }) {
+interface TypewriterProps {
+  text: string;
+  speed?: number;
+  className?: string;
+}
+
+export default function Typewriter({ text, speed = 500, className = "" }: TypewriterProps) {
   const [displayed, setDisplayed] = useState("");
-  const intervalRef = useRef();
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     setDisplayed("");
@@ -13,10 +19,12 @@ export default function Typewriter({ text, speed = 500, className = "" }) {
       if (i <= text.length) {
         setDisplayed(text.slice(0, i));
       } else {
-        clearInterval(intervalRef.current);
+        if (intervalRef.current) clearInterval(intervalRef.current);
       }
     }, speed);
-    return () => clearInterval(intervalRef.current);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
   }, [text, speed]);
 
   return <span className={className}>{displayed}<span className="animate-pulse">|</span></span>;
