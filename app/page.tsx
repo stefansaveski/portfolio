@@ -1,20 +1,23 @@
+"use client";
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 import ProjectCard from "./components/project-card"
 import TechStack from "./components/tech-stack"
 import Image from "next/image"
+
 import ExperienceSection from "./components/experience-section"
+import Typewriter from "./components/Typewriter"
 
 export default function Page() {
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-center px-4 md:px-6">
-          <div className="hidden md:flex items-center gap-6">
-            <Link className="flex items-center space-x-2" href="/">
+          <div className=" md:flex items-center gap-6">
+            {/* <Link className="flex items-center space-x-2" href="/">
               <span className="hidden font-bold sm:inline-block">Stefan Saveski</span>
-            </Link>
+            </Link> */}
             <nav className="flex items-center space-x-6 text-sm font-medium">
               <Link href="#about" className="transition-colors hover:text-foreground/80">
                 About
@@ -36,8 +39,19 @@ export default function Page() {
             <Image src="/pfp.jpg" alt="Profile Picture" className="w-48 h-48 rounded-full mx-auto" width={192} height={192} />
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Software Engineer
+                <Typewriter text="Stefan Saveski" speed={120} />
               </h1>
+              <div className="flex flex-col gap-1 sm:gap-2 ">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold tracking-tight text-gray-700 dark:text-gray-200 opacity-0 animate-fade-in-up" style={{ animationDelay: '2.2s', animationFillMode: 'forwards' }}>
+                  Software Engineer Intern @ Cyberette
+                </h3>
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold tracking-tight text-gray-700 dark:text-gray-200 opacity-0 animate-fade-in-up" style={{ animationDelay: '2.5s', animationFillMode: 'forwards' }}>
+                  Co-Founder @ Kodrum.mk
+                </h3>
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold tracking-tight text-gray-700 dark:text-gray-200 opacity-0 animate-fade-in-up" style={{ animationDelay: '2.8s', animationFillMode: 'forwards' }}>
+                  Student @ FINKI
+                </h3>
+              </div>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400 mt-10">
                 👋 Hi! I&apos;m Stefan, a computer science student passionate about programming. I love solving challenges, learning, and creating impactful software. Beyond coding, I enjoy exploring new experiences and balancing work with hobbies.
               </p>
